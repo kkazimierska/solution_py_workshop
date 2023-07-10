@@ -1,0 +1,11 @@
+# Napisz funkcję, która jako argument przyjmie krotkę i zwraca listę, która zawiera dokładnie takie same elementy.
+
+new_list=[]
+def tuple_to_list(tuple_1):
+    new_list=[]
+    for elements in tuple_1:
+        new_list.append(elements)
+    print(new_list)
+
+tuple_1 = ('USD', 'USA', 'USG')
+tuple_to_list(tuple_1)

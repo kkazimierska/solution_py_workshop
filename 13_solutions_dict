@@ -1,0 +1,58 @@
+#Napisz funkcję, która przyjmie dwa argumenty, listę słowników oraz klucz i zwróci listę wartości znajdujących się pod tym kluczem
+#z każdego słownika na liście.
+
+def new_dict(list, key=None):
+    print(list[key])
+
+
+dict1 = {'A':0, 'B':1, 'C':2, 'D':3}
+dict2 = {'alfa':4, 'beta':5, 'omega':6}
+list_of_dicts = [dict1, dict2] 
+new_dict(list_of_dicts, key=1)
+
+# Napisz funkcję, która przyjmuje jako argument słownik i przechodzi po jego kluczach, wypisując każdy z nich.
+
+def iteracja_keys(dictio):
+    for keys in dictio.keys():
+        print(keys)
+
+iteracja_keys(dict1)
+
+#Napisz funkcję, która przyjmuje jako argument słownik i zwraca sumę wszystkich wartości słownika.  Zakładamy, że wartości zawsze są
+#liczbami.
+
+def iteracja_values(dictio):
+    for values in dictio.values():
+        a = sum(dictio.values())
+    print(a)
+        
+iteracja_values(dict1)
+
+#Napisz funkcję, która przyjmie dwa argumenty, słownik oraz wartość
+#i zwróci nazwę klucza, którego wartość jest równa wartości z argumentu.
+
+def get_the_key(dictio, value):
+    for keys, values in dictio.items():
+        a =list(dictio.items())[1][0]
+    print(a)
+
+get_the_key(dict2, 5)
+
+#Wybierz jedno z powyższych zastosowań słownika.  Napisz funkcję `ustaw`, która przyjmuje trzy argumenty, słownik, klucz oraz wartość i
+#ustawia w słowniku daną wartość pod danym kluczem.  Napisz funkcję`pobierz`, która przyjmuje dwa argumenty, słownik oraz klucz i zwraca
+# wartość słownika pod danym kluczem.  Stosując te funkcje wypełnij słownik danymi adekwatnymi dla wybranego zastosowania i pobierz te dane.
+
+def set_default(dictio, keys, values):
+    dictio = {}
+    dictio.setdefault(keys,values)
+    print(dictio)
+
+dict3={}
+set_default(dict3, 'Unaweza', 'Martyna')
+set_default(dict3, 'WOŚP', 'Owsiak')
+
+def get_value(dictio, key):
+    a = dictio.get(key)
+    print(a)
+
+get_value(dict2, 'beta')
